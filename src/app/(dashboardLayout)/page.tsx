@@ -1,12 +1,11 @@
-import { Button } from "antd";
 
 export default function Home() {
   return (
     <main>
       <h1>Next.js + Tailwind CSS</h1>
-      <Button className="">
+      {/* <Button type="primary">
         Hello
-      </Button>
+      </Button> */}
     </main>
   );
 }

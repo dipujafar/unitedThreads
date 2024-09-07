@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${kumbh.className} antialiased`}
+        className={`${kumbh.className} antialiased bg-[#232323]`}
       >
         <Providers>
         {children}
