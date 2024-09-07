@@ -14,6 +14,8 @@ const config: Config = {
         primary: "#232323",
         secondary: "#3d3d3d",
         info: "#F8FAFC",
+        success: "#34D399",
+        warning: "#F16365",
       },
     },
   },

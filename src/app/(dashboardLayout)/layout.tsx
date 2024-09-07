@@ -1,9 +1,13 @@
 "use client"
 import Sidebar from '@/components/shared/Sidebar';
+import user from "@/assets/patient.jpg"
 import { Button, Layout, theme } from 'antd';
-import { Header } from 'antd/es/layout/layout';
+import { usePathname } from 'next/navigation';
 import { ReactNode, useState } from 'react';
-import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+import { GoBell } from 'react-icons/go';
+import { IoMenu } from 'react-icons/io5';
+import { RxCross1 } from 'react-icons/rx';
+import Image from 'next/image';
 const {  Content,   } = Layout;
 
 const DashboardLayout = ({children}:{children:ReactNode}) => {
@@ -11,35 +15,37 @@ const DashboardLayout = ({children}:{children:ReactNode}) => {
  const {
     token: { colorBgContainer, },
   } = theme.useToken();
-
   const [collapsed, setCollapsed] = useState(false);
+
+  const pathname = usePathname();
 
     return (
       <Layout style={{ minHeight: '100vh' }}>
       <Sidebar collapsed={collapsed} setCollapsed={setCollapsed}/>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }} >
-          <Button
+        <nav className='flex items-center justify-between py-4 pr-4' >
+          <div className='flex items-center gap-x-2'>
+            <Button
             type="text"
-            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            icon={collapsed ? <RxCross1 size={32} className='text-info' /> :<IoMenu size={32} className='text-info' /> }
             onClick={() => setCollapsed(!collapsed)}
-            style={{
-              fontSize: '16px',
-              width: 64,
-              height: 64,
-            }}
           />
-        </Header>
-        <Content className='bg-white'>
-          {/* <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>User</Breadcrumb.Item>
-            <Breadcrumb.Item>Bill</Breadcrumb.Item>
-          </Breadcrumb> */}
+          <h1 className='capitalize text-2xl font-bold text-info'>{pathname.replaceAll("/", " ").replaceAll("-", " ")}</h1>
+          </div>
+          <div className='flex items-center gap-x-6'>
+            <div role='button' className='relative aspect-square size-12 rounded-full bg-info flex-item-center'>
+              <GoBell size={20} />
+            <span className='absolute top-1.5 right-1.5 size-[18px] bg-warning rounded-full text-sm flex-item-center'>3</span>
+            </div>
+            <div className='flex items-center gap-x-2'>
+              <Image src={user} alt='admin profile' width={48} height={48} className='rounded-full' />
+              <h4 className='text-base font-bold text-info'>User Name</h4>
+            </div>
+          </div>
+        </nav>
+        <Content className='bg-info rounded-tl-lg p-4'>
           {children}
         </Content>
-        {/* <Footer style={{ textAlign: 'center' }}>
-          Ant Design ©{new Date().getFullYear()} Created by Ant UED
-        </Footer> */}
       </Layout>
     </Layout>
     );
