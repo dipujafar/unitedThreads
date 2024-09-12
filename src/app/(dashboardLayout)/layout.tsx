@@ -43,7 +43,7 @@ const DashboardLayout = ({children}:{children:ReactNode}) => {
             </div>
           </div>
         </nav>
-        <Content className='bg-info rounded-tl-lg p-4'>
+        <Content className='bg-info rounded-tl-lg p-4 h-[90vh] overflow-auto'>
           {children}
         </Content>
       </Layout>
