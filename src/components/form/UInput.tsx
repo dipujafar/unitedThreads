@@ -17,7 +17,7 @@ const MRInput = ({ type, name, label, placeholder }: TInputProps) => {
           return (
             <Form.Item label={label}>
               <Input placeholder={placeholder} {...field} type={type} id={name} />
-              {error && <small style={{ color: "red" }}>{error.message} something </small>}
+              {error && <small style={{ color: "red" }}>{error.message}  </small>}
             </Form.Item>
           );
         }}

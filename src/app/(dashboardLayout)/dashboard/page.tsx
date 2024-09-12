@@ -1,11 +1,11 @@
 import React from 'react';
 
-const DashboardPage = () => {
+const DashboradPage = () => {
     return (
         <div>
-            dashboard page
+            
         </div>
     );
 };
 
-export default DashboardPage;
+export default DashboradPage;
