@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Providers from "@/lib/Providers/Providers";
-import { kumbh } from "./fonts";
+import { kumbh, roboto } from "./fonts";
+
+
 
 export const metadata: Metadata = {
   title: {
@@ -21,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${kumbh.className}}  antialiased bg-[#232323]`}
+        className={`${kumbh.className} ${roboto.variable}  antialiased bg-[#232323]`}
       >
           <Providers>
             {children}

@@ -62,11 +62,11 @@ const columns: TableProps<TDataType>["columns"] = [
         components: {
           Table: {
             colorBgContainer: "rgb(248,250,252)",
-            colorText: "rgb(0,0,0)",
+            colorText: "#232323",
             colorTextHeading: "rgb(248,250,252)",
-            headerBg: "rgb(0,0,0)",
+            headerBg: "#232323",
             borderColor: "rgb(87,88,88)",
-            headerSplitColor: "rgb(0,0,0)",
+            headerSplitColor: "#232323",
           },
         },
       }}

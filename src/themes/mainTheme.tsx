@@ -21,12 +21,28 @@ const mainTheme: ThemeConfig = {
       itemColor: "rgb(248,250,252)",
       itemBg: "",
       itemBorderRadius: 4,
-      itemSelectedColor: "#232323",
       itemHoverColor: "rgb(35,35,35)",
       itemHoverBg: "rgb(248,250,252)",
       subMenuItemBg: "rgb(87,88,88)",
       itemActiveBg: "rgb(248,250,252)",
     },
+    Button: {
+      colorPrimaryBorder: "#232323",
+      colorPrimaryBg: "#232323",
+      colorPrimaryText: "#ffffff",
+      borderRadius: 8,
+    },
+    "Segmented": {
+      itemActiveBg: "rgb(35,35,35)",
+      itemHoverBg: "rgb(35,35,35)",
+      itemColor: "rgb(35,35,35)",
+      itemHoverColor: "rgb(255,255,255)",
+      itemSelectedBg: "rgb(35,35,35)",
+      trackBg: "rgba(245,245,245,0)",
+      colorText: "rgb(255,255,255)",
+      borderRadius: 8,
+      controlHeight: 42
+    }
   },
 };
 

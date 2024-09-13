@@ -19,6 +19,10 @@ const config: Config = {
         parimaryWhite: "#F8FAFC"
 
       },
+      fontFamily:{
+        roboto:["var(--font-roboto)"],
+
+      }
     },
   },
   plugins: [],

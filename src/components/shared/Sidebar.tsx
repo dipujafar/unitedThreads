@@ -41,8 +41,6 @@ const Sidebar = ({ collapsed, setCollapsed }: TSidebarType) => {
     ]),
   ];
 
-  console.log(items);
-
   return (
     <Sider
       trigger={null}

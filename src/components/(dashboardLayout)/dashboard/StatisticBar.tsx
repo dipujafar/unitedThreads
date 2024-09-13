@@ -4,7 +4,7 @@ import earingIcon from "@/assets/Icons/EarningIcon.png";
 
 const StatisticBar = () => {
   return (
-    <div className="h-32 flex text-parimaryWhite ">
+    <div className="h-32 flex text-parimaryWhite font-roboto">
       <div className="w-1/2 h-full mr-4 bg-primaryBlack rounded-xl flex gap-6 px-12 items-center ">
         <div className="bg-parimaryWhite p-4 rounded-full">
           <Image src={userIcon} alt="user" width={40} height={40} />
