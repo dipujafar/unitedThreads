@@ -7,6 +7,7 @@ import { CiBadgeDollar, CiLogout } from "react-icons/ci";
 import { GoChecklist } from "react-icons/go";
 import { LuClipboardList } from "react-icons/lu";
 import { MdPieChartOutlined } from "react-icons/md";
+import { PiUsersThreeThin } from "react-icons/pi";
 import { TbListDetails, TbSettingsCheck } from "react-icons/tb";
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -79,6 +80,11 @@ const Sidebar = ({ collapsed, setCollapsed }: TSidebarType) => {
               key: "dashboard",
               label: <Link href="/dashboard">Dashboard</Link>,
               icon: <AiOutlineBarChart size={24} />,
+            },
+            {
+              key: "user-management",
+              icon: <PiUsersThreeThin strokeWidth={1} size={24} />,
+              label: <Link href="/user-management">User Management</Link>,
             },
             {
               key: "earnings",

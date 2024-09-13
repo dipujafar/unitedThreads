@@ -16,9 +16,7 @@ const DashboardLayout = ({children}:{children:ReactNode}) => {
     token: { colorBgContainer, },
   } = theme.useToken();
   const [collapsed, setCollapsed] = useState(false);
-
   const pathname = usePathname();
-
     return (
     <Layout style={{minHeight:"100dvh"}}>
       <Sidebar collapsed={collapsed} setCollapsed={setCollapsed}/>

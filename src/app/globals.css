@@ -49,3 +49,10 @@ font-family: var(--font-roboto) !important;
 .recharts-cartesian-axis-tick > text{
   fill: #fff;
 }
+
+.ant-pagination-item-active {
+  background-color: #000000 !important;
+}
+.ant-pagination-item-active > a {
+  color: rgb(248,250,252) !important;
+}
