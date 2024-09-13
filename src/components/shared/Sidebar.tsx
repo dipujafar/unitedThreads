@@ -61,7 +61,7 @@ console.log(items)
           items={[
             {
               key: 'dashboard',
-              label: <Link href="/dashboard">Dashboard</Link>,
+              label: <Link href="/">Dashboard</Link>,
               icon:<AiOutlineBarChart size={24} />
             },
             {

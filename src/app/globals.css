@@ -9,6 +9,14 @@ body {
 
 }
 
+.font-poppins {
+  font-family: var(--font-poppins) !important;
+}
+
+.font-roboto {
+font-family: var(--font-roboto) !important;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -16,7 +24,7 @@ body {
 }
 
 .flex-item-center {
-  @apply flex items-center justify-center
+  @apply flex items-center justify-center;
 }
 
 .sidebar-menu > .ant-menu-item {
