@@ -1,17 +1,13 @@
 "use client";
 
 import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  Brush,
-  AreaChart,
   Area,
+  AreaChart,
+  CartesianGrid,
   ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis
 } from "recharts";
 
 const ProductSellingChart = () => {
