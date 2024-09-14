@@ -25,6 +25,8 @@ const mainTheme: ThemeConfig = {
       itemHoverBg: "rgb(248,250,252)",
       subMenuItemBg: "rgb(87,88,88)",
       itemActiveBg: "rgb(248,250,252)",
+      itemSelectedBg: "rgb(255,255,255)",
+      itemSelectedColor: "rgb(0,0,0)",
     },
     Button: {
       colorPrimaryBorder: "#232323",
@@ -32,7 +34,7 @@ const mainTheme: ThemeConfig = {
       colorPrimaryText: "#ffffff",
       borderRadius: 8,
     },
-    "Segmented": {
+    Segmented: {
       itemActiveBg: "rgb(35,35,35)",
       itemHoverBg: "rgb(35,35,35)",
       itemColor: "rgb(35,35,35)",
@@ -41,8 +43,19 @@ const mainTheme: ThemeConfig = {
       trackBg: "rgba(245,245,245,0)",
       colorText: "rgb(255,255,255)",
       borderRadius: 8,
-      controlHeight: 42
-    }
+      controlHeight: 42,
+    },
+    Popconfirm: {
+      colorWarning: "rgb(245,34,45)",
+    },
+    Table: {
+      colorBgContainer: "rgb(248,250,252)",
+      colorText: "#232323",
+      colorTextHeading: "rgb(248,250,252)",
+      headerBg: "#232323",
+      borderColor: "rgb(87,88,88)",
+      headerSplitColor: "#232323",
+    },
   },
 };
 
