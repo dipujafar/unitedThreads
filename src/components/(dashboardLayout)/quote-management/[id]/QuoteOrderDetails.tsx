@@ -4,13 +4,13 @@ import { CiUser } from "react-icons/ci";
 import { LuCalendarDays } from "react-icons/lu";
 import masterCardlogo from "@/assets/image/mastercard.png";
 import Image from "next/image";
-import OrderProductTable from "./OrderProductTable";
+import QuoteOrderProductTable from "./QuoteOrderProductTable";
 
 const handleChange = (value: string) => {
   console.log(`selected ${value}`);
 };
 
-const SingleOrderDetailsContainer = ({}) => {
+const QuoteOrderDetails = ({}) => {
   return (
     <div>
       <div className="flex justify-between">
@@ -71,10 +71,10 @@ const SingleOrderDetailsContainer = ({}) => {
       </div>
       {/* order Products Table */}
       <div className="mt-6">
-      <OrderProductTable></OrderProductTable>
+     <QuoteOrderProductTable></QuoteOrderProductTable>
       </div>
     </div>
   );
 };
 
-export default SingleOrderDetailsContainer;
+export default QuoteOrderDetails;

@@ -11,7 +11,8 @@ import { PiUsersThreeThin } from "react-icons/pi";
 import { TbListDetails, TbSettingsCheck } from "react-icons/tb";
 import { HiOutlineCircleStack } from "react-icons/hi2";
 import { SlBookOpen } from "react-icons/sl";
-import { PiNotebookThin } from "react-icons/pi";
+import { RiContactsBookUploadLine } from "react-icons/ri";
+import { MdManageHistory } from "react-icons/md";
 import logoImage from "@/assets//image/logo.png";
 import { useState } from "react";
 type MenuItem = Required<MenuProps>["items"][number];
@@ -50,7 +51,19 @@ const items: MenuItem[] = [
   {
     key: "quotes",
     icon: <TbListDetails size={24} />,
-    label: <Link href="/quotes-details">Quote Details</Link>,
+    label: "Quote Details",
+    children: [
+      {
+        key: "productCategory",
+        icon: <RiContactsBookUploadLine   size={24} />,
+        label: <Link href="/quoteProduct">Product Category</Link>,
+      },
+      {
+        key: "quoteManagement",
+        icon: <MdManageHistory  size={24} />,
+        label: <Link href="/quote-management">Quote Management</Link>,
+      },
+    ],
   },
   {
     key: "settings",

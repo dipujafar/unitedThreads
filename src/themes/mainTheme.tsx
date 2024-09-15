@@ -64,6 +64,9 @@ const mainTheme: ThemeConfig = {
       colorText: "rgb(248,250,252)",
       itemSelectedColor: "rgb(0,176,71)",
     },
+    Select: {
+      colorBorder: "rgb(0,0,0)",
+    },
   },
 };
 

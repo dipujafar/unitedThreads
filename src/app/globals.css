@@ -84,3 +84,7 @@ body {
   border-radius: 10px;
   overflow: auto !important;
 }
+
+.ant-menu-sub > .ant-menu-item{
+  padding-left: 25px !important;
+}
