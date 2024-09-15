@@ -61,6 +61,10 @@ const mainTheme: ThemeConfig = {
     Form: {
       labelFontSize: 18,
     },
+    Tabs: {
+      colorText: "rgb(248,250,252)",
+      itemSelectedColor: "rgb(0,176,71)",
+    },
   },
 };
 

@@ -1,8 +1,9 @@
 "use client"
-import user from "@/assets/patient.jpg";
+import userImag from "@/assets/image/userImage.png";
 import Sidebar from '@/components/shared/Sidebar';
 import { Button, Layout} from 'antd';
 import Image from 'next/image';
+import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { ReactNode, useState } from 'react';
 import { GoBell } from 'react-icons/go';
@@ -29,14 +30,18 @@ const DashboardLayout = ({children}:{children:ReactNode}) => {
           <h1 className='capitalize text-2xl font-bold text-info font-roboto'>{pathname.length > 1 ? pathname.replaceAll("/", " ").replaceAll("-", " "):"dashboard"}</h1>
           </div>
           <div className='flex items-center gap-x-6'>
+          <Link href={"/notifications"}>
             <div role='button' className='relative aspect-square size-12 rounded-full bg-info flex-item-center'>
               <GoBell size={20} />
             <span className='absolute top-1.5 right-1.5 size-[18px] bg-warning text-parimaryWhite rounded-full text-sm flex-item-center'>3</span>
             </div>
-            <div className='flex items-center gap-x-2'>
-              <Image src={user} alt='admin profile' width={48} height={48} className='rounded-full' />
-              <h4 className='text-base font-bold text-info font-roboto'> User Name</h4>
+            </Link>
+            <Link href={"/profile"}>
+            <div className='flex items-center gap-x-3'>
+              <Image src={userImag} alt='admin profile' width={48} height={48} className='rounded-full' />
+              <h4 className='text-base font-medium text-info '>Akash</h4>
             </div>
+            </Link>
           </div>
         </nav>
         <Content className='bg-info rounded-tl-lg p-6 h-[90vh] overflow-auto'>
