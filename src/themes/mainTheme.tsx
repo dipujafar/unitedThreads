@@ -53,7 +53,6 @@ const mainTheme: ThemeConfig = {
       colorText: "#232323",
       colorTextHeading: "rgb(248,250,252)",
       headerBg: "#232323",
-      borderColor: "rgb(87,88,88)",
       headerSplitColor: "#232323",
     },
     Input: {

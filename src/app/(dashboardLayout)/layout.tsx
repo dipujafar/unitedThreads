@@ -19,8 +19,6 @@ const DashboardLayout = ({children}:{children:ReactNode}) => {
     <Layout style={{minHeight:"100dvh"}}>
       <Sidebar collapsed={collapsed} setCollapsed={setCollapsed}/>
       <Layout>
-       
-       
          <nav className='flex items-center justify-between py-4 pr-[68px]' >
           <div className='flex items-center gap-x-2'>
             <Button
@@ -33,7 +31,7 @@ const DashboardLayout = ({children}:{children:ReactNode}) => {
           <div className='flex items-center gap-x-6'>
             <div role='button' className='relative aspect-square size-12 rounded-full bg-info flex-item-center'>
               <GoBell size={20} />
-            <span className='absolute top-1.5 right-1.5 size-[18px] bg-warning rounded-full text-sm flex-item-center'>3</span>
+            <span className='absolute top-1.5 right-1.5 size-[18px] bg-warning text-parimaryWhite rounded-full text-sm flex-item-center'>3</span>
             </div>
             <div className='flex items-center gap-x-2'>
               <Image src={user} alt='admin profile' width={48} height={48} className='rounded-full' />
@@ -41,7 +39,7 @@ const DashboardLayout = ({children}:{children:ReactNode}) => {
             </div>
           </div>
         </nav>
-        <Content className='bg-info rounded-tl-lg p-4 h-[90vh] overflow-auto'>
+        <Content className='bg-info rounded-tl-lg p-6 h-[90vh] overflow-auto'>
           {children}
         </Content>
       </Layout>

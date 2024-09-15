@@ -1,9 +1,10 @@
+import OrderDetailsContainer from '@/components/(dashboardLayout)/order-details/OrderDetailsContainer';
 import React from 'react';
 
 const OrderDetailsPage = () => {
     return (
         <div>
-            order details page
+           <OrderDetailsContainer></OrderDetailsContainer>
         </div>
     );
 };
