@@ -31,15 +31,19 @@ body {
 }
 
 .ant-menu-item {
-  display: flex !important;
-  align-items: center !important;
+  background-color: #575858 !important;
+}
+.ant-menu-submenu {
+  background-color: #575858 !important;
+  margin-left: 4px;
+  margin-right: 4px;
+ 
+}
+.ant-menu-item-selected{
+  background-color: #fff !important;
 }
 
-.sidebar-menu > .ant-menu-item-selected {
-  background-color: rgb(248, 250, 252);
-  color: #3d3d3d;
-  font-weight: 500;
-}
+
 
 .recharts-cartesian-axis-tick > text {
   fill: #fff;
@@ -58,4 +62,25 @@ body {
 
 .ant-dropdown-trigger .anticon svg {
   fill: #fff !important;
+}
+
+.ql-toolbar {
+  margin-bottom: 12px !important;
+  display: flex;
+  justify-content: end;
+  border: none !important;
+}
+
+.ql-formats {
+  background-color: white;
+  border-radius: 3px;
+}
+
+.ql-container {
+  background-color: #232323;
+  color: #f8fafc;
+  height: 550px !important;
+  border: none !important;
+  border-radius: 10px;
+  overflow: auto !important;
 }

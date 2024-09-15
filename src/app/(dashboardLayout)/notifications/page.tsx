@@ -1,5 +1,5 @@
-import NotificationsContainer from '@/components/notifications/NotificationsContainer';
-import React from 'react';
+import NotificationsContainer from "@/components/(dashboardLayout)/notifications/NotificationsContainer";
+
 
 const NotificationsPage = () => {
     return (

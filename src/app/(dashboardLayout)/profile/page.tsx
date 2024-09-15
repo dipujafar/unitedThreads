@@ -1,4 +1,4 @@
-import ProfileContainer from '@/components/profile/ProfileContainer';
+import ProfileContainer from '@/components/(dashboardLayout)/profile/ProfileContainer';
 import React from 'react';
 
 const ProfilePage = () => {

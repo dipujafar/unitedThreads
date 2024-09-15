@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 import { ReactNode, useState } from 'react';
 import { GoBell } from 'react-icons/go';
 import { IoMenu } from 'react-icons/io5';
-import { RxCross1 } from 'react-icons/rx';
+import { RxCross2 } from 'react-icons/rx';
 const {  Content,   } = Layout;
 
 const DashboardLayout = ({children}:{children:ReactNode}) => {
@@ -24,7 +24,7 @@ const DashboardLayout = ({children}:{children:ReactNode}) => {
           <div className='flex items-center gap-x-2'>
             <Button
             type="text"
-            icon={collapsed ? <RxCross1 size={32} className='text-info' /> :<IoMenu size={32} className='text-info' /> }
+            icon={collapsed ? <RxCross2 size={32} className='text-info' /> :<IoMenu size={32} className='text-info' /> }
             onClick={() => setCollapsed(!collapsed)}
           />
           <h1 className='capitalize text-2xl font-bold text-info font-roboto'>{pathname.length > 1 ? pathname.replaceAll("/", " ").replaceAll("-", " "):"dashboard"}</h1>

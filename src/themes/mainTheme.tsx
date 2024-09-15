@@ -23,7 +23,6 @@ const mainTheme: ThemeConfig = {
       itemBorderRadius: 4,
       itemHoverColor: "rgb(35,35,35)",
       itemHoverBg: "rgb(248,250,252)",
-      subMenuItemBg: "rgb(87,88,88)",
       itemActiveBg: "rgb(248,250,252)",
       itemSelectedBg: "rgb(255,255,255)",
       itemSelectedColor: "rgb(0,0,0)",
