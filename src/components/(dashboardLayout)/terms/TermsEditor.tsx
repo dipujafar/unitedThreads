@@ -36,11 +36,13 @@ const TermsEditor = () => {
         onChange={setValue}
         placeholder="Start writing ......"
       />
-      <Button
+       <Button
         size="large"
         block
         style={{
           marginTop: "20px",
+          backgroundColor: "transparent",
+          color: "#000",
           border: "1px solid #232323",
           borderRadius: "20px"
         }}

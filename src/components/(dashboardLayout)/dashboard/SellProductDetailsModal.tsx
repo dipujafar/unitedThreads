@@ -1,5 +1,5 @@
 "use client";
-import { Divider, message, Modal, PopconfirmProps } from "antd";
+import { Divider,  Modal } from "antd";
 import productImage from "@/assets/image/hoddieImage.png";
 import Image from "next/image";
 

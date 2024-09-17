@@ -2,8 +2,6 @@
 import { Select } from "antd";
 import { CiUser } from "react-icons/ci";
 import { LuCalendarDays } from "react-icons/lu";
-import masterCardlogo from "@/assets/image/mastercard.png";
-import Image from "next/image";
 import DeliveryQuoteProductTable from "./DeliveryQuoteProductTable";
 
 const handleChange = (value: string) => {

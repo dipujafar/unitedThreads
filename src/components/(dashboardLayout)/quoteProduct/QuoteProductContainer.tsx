@@ -4,7 +4,6 @@ import { Button, Segmented } from "antd";
 import { useState } from "react";
 import { CiCirclePlus } from "react-icons/ci";
 import { FaChevronLeft } from "react-icons/fa6";
-import Link from "next/link";
 import ProductCard from "./ProductCard";
 import AddCetagoryModal from "./AddCetagoryModal";
 import AddQuoteProduct from "./AddQuoteProduct";
@@ -53,7 +52,7 @@ const QuoteProductContainer = () => {
   };
 
   const products: TQuoteProduct[] = Array.from({ length: 5 }).map((_, inx) => ({
-    _id: "5",
+    _id: `${inx + 1}`,
     name: "Hoodie",
     category: "Transportation",
     shortDescription:
