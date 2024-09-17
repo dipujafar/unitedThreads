@@ -168,7 +168,7 @@ const columns: TableProps<TDataType>["columns"] = [
     dataIndex: "action",
     render: () => (
       <div className="ml-4">
-        <Link href={"/quote-management/1"}>
+        <Link href={"/quote-details/1"}>
         <IoEyeOutline size={20} />
         </Link>
       </div>
@@ -176,7 +176,7 @@ const columns: TableProps<TDataType>["columns"] = [
   },
 ];
 
-const QuotaOrderListTable = () => {
+const QuoteListTable = () => {
   return (
     <div>
       <Table
@@ -188,4 +188,4 @@ const QuotaOrderListTable = () => {
   );
 };
 
-export default QuotaOrderListTable;
+export default QuoteListTable;

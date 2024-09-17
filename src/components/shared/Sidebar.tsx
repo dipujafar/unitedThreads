@@ -13,8 +13,10 @@ import { HiOutlineCircleStack } from "react-icons/hi2";
 import { SlBookOpen } from "react-icons/sl";
 import { RiContactsBookUploadLine } from "react-icons/ri";
 import { MdManageHistory } from "react-icons/md";
+import { TbChecklist } from "react-icons/tb";
 import logoImage from "@/assets//image/logo.png";
 import { useState } from "react";
+import MenuItem from "antd/es/menu/MenuItem";
 type MenuItem = Required<MenuProps>["items"][number];
 
 type TSidebarType = {
@@ -22,7 +24,9 @@ type TSidebarType = {
   setCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const items: MenuItem[] = [
+const role = ""
+
+const adminNavLink: MenuItem[] = [
   {
     key: "dashboard",
     label: <Link href="/dashboard">Dashboard</Link>,
@@ -94,6 +98,19 @@ const items: MenuItem[] = [
   },
 ];
 
+const nvaLinkCSR: MenuItem[] = [
+  {
+    key: "quoteDetails",
+    label: <Link href="/quote-details">Quote Details</Link>,
+    icon: <TbChecklist  size={24} />,
+  },
+  {
+    key: "logout",
+    icon: <CiLogout strokeWidth={0.8} size={24} />,
+    label: "Logout",
+  },
+]
+
 const Sidebar = ({ collapsed, setCollapsed }: TSidebarType) => {
   const [current, setCurrent] = useState("dashboard");
 
@@ -119,7 +136,7 @@ const Sidebar = ({ collapsed, setCollapsed }: TSidebarType) => {
           defaultOpenKeys={["dashboard"]}
           selectedKeys={[current]}
           mode="inline"
-          items={items}
+          items={role==="admin" as string? adminNavLink: nvaLinkCSR}
         />
       </div>
     </Sider>
