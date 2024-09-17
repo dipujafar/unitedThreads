@@ -4,7 +4,6 @@ import { Button, Checkbox, Form, Input, Flex, ConfigProvider } from "antd";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { toast } from "sonner";
 
 type FieldType = {
   email?: string;
