@@ -53,7 +53,7 @@ const RecentSellingProductTable = () => {
       title: "Action",
       dataIndex: "action",
       render: () => (
-        <div className="ml-4">
+        <div className="ml-4 cursor-pointer">
           <IoEyeOutline size={20} onClick={()=> setOpen(true)} />
         </div>
       ),

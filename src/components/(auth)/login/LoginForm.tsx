@@ -3,6 +3,8 @@ import type { FormProps } from "antd";
 import { Button, Checkbox, Form, Input, Flex, ConfigProvider } from "antd";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 type FieldType = {
   email?: string;
@@ -15,13 +17,39 @@ const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (errorInfo) => {
 };
 
 const LoginForm = () => {
-  const route = useRouter();
+  const router = useRouter();
+  const [role, setRole] = useState("");
+  const [user, setUser] = useState("");
+
+  console.log(user);
 
   const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
     console.log("Success:", values);
-    localStorage.setItem("user", values?.email ? values?.email :"")
-    route.push("/dashboard");
+    localStorage.setItem("user", values?.email ? values?.email : "");
+    setRole(values?.email?.split("@")[0] || "");
   };
+
+  // Listen for changes in the `role` state and perform redirect
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(storedUser);
+      const derivedRole = storedUser.split("@")[0];
+      setRole(derivedRole);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (role) {
+      router.push(
+        role === "admin"
+          ? "/dashboard"
+          : role === "csr"
+          ? "/quote-details"
+          : ""
+      );
+    }
+  }, [role, router]);
 
   return (
     <ConfigProvider
@@ -53,7 +81,7 @@ const LoginForm = () => {
             },
           ]}
         >
-          <Input size="large" type="email" placeholder="Example@gamil.com" />
+          <Input size="large" type="email" placeholder="Example@gmail.com" />
         </Form.Item>
 
         <Form.Item<FieldType>

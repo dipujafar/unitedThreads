@@ -26,7 +26,7 @@ const data: TDataType[] = [
     customerName: "Farvez Sir",
     date: "11 oct 24, 11.10PM",
     amount: "$152",
-    status: "Delivered",
+    status: "Approved",
   },
   {
     key: 3,
@@ -34,7 +34,7 @@ const data: TDataType[] = [
     customerName: "Farvez Sir",
     date: "11 oct 24, 11.10PM",
     amount: "$152",
-    status: "Processing",
+    status: "Quote Sent",
   },
   {
     key: 4,
@@ -50,7 +50,7 @@ const data: TDataType[] = [
     customerName: "Farvez Sir",
     date: "11 oct 24, 11.10PM",
     amount: "$152",
-    status: "Processing",
+    status: "Quote Sent",
   },
   {
     key: 6,
@@ -58,7 +58,7 @@ const data: TDataType[] = [
     customerName: "Farvez Sir",
     date: "11 oct 24, 11.10PM",
     amount: "$152",
-    status: "Delivered",
+    status: "Approved",
   },
   {
     key: 7,
@@ -74,7 +74,7 @@ const data: TDataType[] = [
     customerName: "Farvez Sir",
     date: "11 oct 24, 11.10PM",
     amount: "$152",
-    status: "Processing",
+    status: "Quote Sent",
   },
   {
     key: 9,
@@ -90,7 +90,7 @@ const data: TDataType[] = [
     customerName: "Farvez Sir",
     date: "11 oct 24, 11.10PM",
     amount: "$152",
-    status: "Delivered",
+    status: "Approved",
   },
   {
     key: 11,
@@ -98,7 +98,7 @@ const data: TDataType[] = [
     customerName: "Farvez Sir",
     date: "11 oct 24, 11.10PM",
     amount: "$152",
-    status: "Processing",
+    status: "Quote Sent",
   },
   {
     key: 12,
@@ -106,7 +106,7 @@ const data: TDataType[] = [
     customerName: "Farvez Sir",
     date: "11 oct 24, 11.10PM",
     amount: "$152",
-    status: "Delivered",
+    status: "Approved",
   },
 ];
 
@@ -140,10 +140,10 @@ const columns: TableProps<TDataType>["columns"] = [
       if (value === "Pending") {
         return <p className="text-[#F16365]">{value}</p>;
       }
-      if (value === "Processing") {
+      if (value === "Quote Sent") {
         return <p>{value}</p>;
       }
-      if (value === "Delivered") {
+      if (value === "Approved") {
         return <p className="text-[#00B047]">{value}</p>;
       }
     },
@@ -153,12 +153,12 @@ const columns: TableProps<TDataType>["columns"] = [
         value: "Pending",
       },
       {
-        text: "Processing",
-        value: "Processing",
+        text: "Quote Sent",
+        value: "Quote Sent",
       },
       {
-        text: "Delivered",
-        value: "Delivered",
+        text: "Approved",
+        value: "Approved",
       },
     ],
     onFilter: (value, record) => record.status.indexOf(value as string) === 0,
@@ -169,7 +169,7 @@ const columns: TableProps<TDataType>["columns"] = [
     render: () => (
       <div className="ml-4">
         <Link href={"/quote-details/1"}>
-        <IoEyeOutline size={20} />
+        <IoEyeOutline className="cursor-pointer" size={20} />
         </Link>
       </div>
     ),

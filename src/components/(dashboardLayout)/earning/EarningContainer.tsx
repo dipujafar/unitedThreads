@@ -49,7 +49,7 @@ const EarningContainer = () => {
       dataIndex: "action",
       render: () => (
         <div className="ml-4">
-          <IoEyeOutline size={20} onClick={()=>setOpen(!open)} />
+          <IoEyeOutline className="cursor-pointer" size={20} onClick={()=>setOpen(!open)} />
         </div>
       ),
     },
