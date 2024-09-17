@@ -24,7 +24,7 @@ type TSidebarType = {
   setCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const role = ""
+const role = "admin";
 
 const adminNavLink: MenuItem[] = [
   {
@@ -59,12 +59,12 @@ const adminNavLink: MenuItem[] = [
     children: [
       {
         key: "productCategory",
-        icon: <RiContactsBookUploadLine   size={24} />,
+        icon: <RiContactsBookUploadLine size={24} />,
         label: <Link href="/quoteProduct">Product Category</Link>,
       },
       {
         key: "quoteManagement",
-        icon: <MdManageHistory  size={24} />,
+        icon: <MdManageHistory size={24} />,
         label: <Link href="/quote-management">Quote Management</Link>,
       },
     ],
@@ -102,14 +102,14 @@ const nvaLinkCSR: MenuItem[] = [
   {
     key: "quoteDetails",
     label: <Link href="/quote-details">Quote Details</Link>,
-    icon: <TbChecklist  size={24} />,
+    icon: <TbChecklist size={24} />,
   },
   {
     key: "logout",
     icon: <CiLogout strokeWidth={0.8} size={24} />,
     label: "Logout",
   },
-]
+];
 
 const Sidebar = ({ collapsed, setCollapsed }: TSidebarType) => {
   const [current, setCurrent] = useState("dashboard");
@@ -136,7 +136,13 @@ const Sidebar = ({ collapsed, setCollapsed }: TSidebarType) => {
           defaultOpenKeys={["dashboard"]}
           selectedKeys={[current]}
           mode="inline"
-          items={role==="admin" as string? adminNavLink: nvaLinkCSR}
+          items={
+            role === ("admin" as string)
+              ? adminNavLink
+              : role === ("csr" as string)
+              ? nvaLinkCSR
+              : []
+          }
         />
       </div>
     </Sider>

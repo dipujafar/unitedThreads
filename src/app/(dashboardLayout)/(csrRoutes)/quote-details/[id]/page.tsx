@@ -1,7 +1,7 @@
 import QuoteOrderDetailsContainer from "@/components/(dashboardLayout)/(csrRoute)/quote-details/[id]/QuoteOrderDetailsContainer";
 
 
-const QuoteOrderDetais = () => {
+const QuoteOrderDetaisPage = () => {
     return (
         <div>
             <QuoteOrderDetailsContainer></QuoteOrderDetailsContainer>
@@ -9,4 +9,4 @@ const QuoteOrderDetais = () => {
     );
 };
 
-export default QuoteOrderDetais;
+export default QuoteOrderDetaisPage;

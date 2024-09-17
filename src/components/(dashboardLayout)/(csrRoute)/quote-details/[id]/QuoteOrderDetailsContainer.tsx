@@ -13,6 +13,7 @@ import { CiUser } from "react-icons/ci";
 import { LuCalendarDays } from "react-icons/lu";
 import { TbMessage } from "react-icons/tb";
 import uploadedImage from "@/assets/image/hoddieImage.png";
+import Link from "next/link";
 
 // Reset FieldType to match the form fields
 type FieldType = {
@@ -52,9 +53,11 @@ const QuoteOrderDetailsContainer = () => {
             <LuCalendarDays className=" w-6 h-6" />
             <p className=" text-md">Feb 16,2022</p>
           </div>
+          <Link href={"/message/userName"}>
           <Button size="large" icon={<TbMessage />}>
             Message
           </Button>
+          </Link>
         </div>
         <div className="flex gap-3">
           <CiUser className="w-12 h-12 rounded-md bg-primaryBlack text-parimaryWhite py-2 px-2" />
