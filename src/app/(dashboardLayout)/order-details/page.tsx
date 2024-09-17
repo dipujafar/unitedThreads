@@ -1,5 +1,6 @@
-import OrderDetailsContainer from '@/components/(dashboardLayout)/order-details/OrderDetailsContainer';
-import React from 'react';
+import OrderDetailsContainer from "@/components/(dashboardLayout)/order-details/OrderDetailsContainer";
+
+
 
 const OrderDetailsPage = () => {
     return (
