@@ -6,15 +6,15 @@ import prodctImage from "@/assets/image/hoodie.png";
 type TDataType = {
   key: number;
   product: string;
-  orderID: string;
   quantity: number;
+  shipmentQuantity: number;
   total: string;
 };
-const data: TDataType[] = Array.from({ length: 4 }).map((_, inx) => ({
+const data: TDataType[] = Array.from({ length: 1 }).map((_, inx) => ({
   key: inx + 1,
   product: "Hoodie",
-  orderID: "#25421",
-  quantity: 2,
+  quantity: 455,
+  shipmentQuantity: 250,
   total: "$800.40",
 }));
 
@@ -30,12 +30,12 @@ const columns: TableProps<TDataType>["columns"] = [
     ),
   },
   {
-    title: "Order ID",
-    dataIndex: "orderID",
+    title: "Available Quantity",
+    dataIndex: "quantity",
   },
   {
-    title: "Quantity",
-    dataIndex: "quantity",
+    title: "Shipment Quantity",
+    dataIndex: "shipmentQuantity",
   },
   {
     title: "Total",
@@ -43,7 +43,7 @@ const columns: TableProps<TDataType>["columns"] = [
   },
 ];
 
-const QuoteOrderProductTable = () => {
+const DeliveryQuoteProductTable = () => {
   return (
     <ConfigProvider
       theme={{
@@ -59,11 +59,16 @@ const QuoteOrderProductTable = () => {
         },
       }}
     >
-      <div className="py-6 px-4 bg-[#EBEDEE] rounded">
+      <div className="py-6 px-4 bg-[#EBEDEE] rounded ">
         <h1 className="text-xl font-semibold">Products</h1>
         <Divider></Divider>
-        <Table columns={columns} dataSource={data} pagination={false}></Table>
-        <div className="mt-4 flex flex-col  gap-2  lg:mr-64">
+        <Table
+          columns={columns}
+          dataSource={data}
+          pagination={false}
+          style={{ minHeight: "50vh" }}
+        ></Table>
+        <div className="mt-4 flex flex-col  gap-2  mr-36">
           <h1 className="text-end">
             Paid <span className="ml-16">$3,200</span>
           </h1>
@@ -79,4 +84,4 @@ const QuoteOrderProductTable = () => {
   );
 };
 
-export default QuoteOrderProductTable;
+export default DeliveryQuoteProductTable;

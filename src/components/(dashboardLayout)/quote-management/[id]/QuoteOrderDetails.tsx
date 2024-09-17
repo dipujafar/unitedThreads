@@ -7,6 +7,7 @@ import Image from "next/image";
 import QuoteOrderProductTable from "./QuoteOrderProductTable";
 import DeliveryInfoModal from "./DeliveryInfoModal";
 import { useState } from "react";
+import Link from "next/link";
 
 const handleChange = (value: string) => {
   console.log(`selected ${value}`);
@@ -37,9 +38,11 @@ const QuoteOrderDetails = ({}) => {
             <LuCalendarDays className=" w-6 h-6" />
             <p className=" text-md">Feb 16,2022</p>
           </div>
+          <Link href={"/quote-management/1/deliveryQuoteProduct"}>
           <p className="text-xl font-bold mt-4">
             View shipment delivery status
           </p>
+          </Link>
         </div>
         <div className="flex gap-3">
           <CiUser className="w-12 h-12 rounded-md bg-primaryBlack text-parimaryWhite py-2 px-2" />

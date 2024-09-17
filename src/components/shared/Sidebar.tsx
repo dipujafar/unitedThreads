@@ -94,7 +94,7 @@ const adminNavLink: MenuItem[] = [
   {
     key: "logout",
     icon: <CiLogout strokeWidth={0.8} size={24} />,
-    label: "Logout",
+    label: <Link href={'/login'}>Logout</Link>,
   },
 ];
 
@@ -107,7 +107,7 @@ const nvaLinkCSR: MenuItem[] = [
   {
     key: "logout",
     icon: <CiLogout strokeWidth={0.8} size={24} />,
-    label: "Logout",
+    label: <Link href={'/login'}>Logout</Link>,
   },
 ];
 

@@ -1,4 +1,5 @@
 import { Button, Form, FormProps, Input, Modal, Select } from "antd";
+import { useRouter } from "next/navigation";
 
 type TPropsType = {
   open: boolean;
@@ -9,9 +10,7 @@ type FieldType = {
   category: string;
 };
 
-const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-  console.log("Success:", values);
-};
+
 
 const handleChange = (value: string) => {
     console.log(`selected ${value}`);
@@ -19,6 +18,13 @@ const handleChange = (value: string) => {
   
 
 const DeliveryInfoModal = ({ open, setOpen }: TPropsType) => {
+  const route = useRouter();
+
+  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
+    console.log("Success:", values);
+    route.push("/quote-management/1/deliveryQuoteProduct")
+  };
+
   return (
     <Modal
       open={open}
@@ -48,7 +54,7 @@ const DeliveryInfoModal = ({ open, setOpen }: TPropsType) => {
         </div>
         <div className="mt-10">
           <Form layout="vertical" onFinish={onFinish}>
-            <Form.Item label="Shipment Quantity" name="shipmentQuantity">
+            <Form.Item label="Shipment Quantity" name="shipmentQuantity" rules={[{required: true}]}>
               <Input size="large" placeholder="Enter Shipment Quantity"></Input>
             </Form.Item>
             <Button htmlType="submit" block size="large">

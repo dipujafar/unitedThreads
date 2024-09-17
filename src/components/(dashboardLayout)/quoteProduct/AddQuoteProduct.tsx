@@ -40,7 +40,7 @@ const AddQuoteProduct = ({ open, setOpen }: TPropsType) => {
             </Form.Item>
 
             {/* input category */}
-            <Form.Item label="Product Name" name="productName">
+            <Form.Item label="Category" name="category">
               <Select
                 placeholder="Select Category"
                 size="large"

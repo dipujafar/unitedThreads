@@ -19,7 +19,7 @@ const ForgetPasswordForm = () => {
     console.log("Success:", values);
 
     if (values.email) {
-      route.push("/setNewPass");
+      route.push("/verifyEmail");
     }
   };
 
