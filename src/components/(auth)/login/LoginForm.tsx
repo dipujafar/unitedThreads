@@ -19,6 +19,7 @@ const LoginForm = () => {
 
   const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
     console.log("Success:", values);
+    localStorage.setItem("user", values?.email ? values?.email :"")
     route.push("/");
   };
 

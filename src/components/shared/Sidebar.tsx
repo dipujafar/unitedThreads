@@ -15,7 +15,7 @@ import { RiContactsBookUploadLine } from "react-icons/ri";
 import { MdManageHistory } from "react-icons/md";
 import { TbChecklist } from "react-icons/tb";
 import logoImage from "@/assets//image/logo.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MenuItem from "antd/es/menu/MenuItem";
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -23,8 +23,6 @@ type TSidebarType = {
   collapsed: boolean;
   setCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
 };
-
-const role = "admin";
 
 const adminNavLink: MenuItem[] = [
   {
@@ -94,7 +92,7 @@ const adminNavLink: MenuItem[] = [
   {
     key: "logout",
     icon: <CiLogout strokeWidth={0.8} size={24} />,
-    label: <Link href={'/login'}>Logout</Link>,
+    label: <Link href={"/login"}>Logout</Link>,
   },
 ];
 
@@ -107,16 +105,31 @@ const nvaLinkCSR: MenuItem[] = [
   {
     key: "logout",
     icon: <CiLogout strokeWidth={0.8} size={24} />,
-    label: <Link href={'/login'}>Logout</Link>,
+    label: <Link href={"/login"}>Logout</Link>,
   },
 ];
 
 const Sidebar = ({ collapsed, setCollapsed }: TSidebarType) => {
   const [current, setCurrent] = useState("dashboard");
+  const [role, setRole] = useState("");
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    setUser(localStorage.getItem("user") as string);
+    if ( user) {
+      return setRole(user?.split("@")[0] as string);
+    }
+    console.log("user not found");
+  }, [user, role]);
+
+  console.log(role);
 
   const onClick: MenuProps["onClick"] = (e) => {
     console.log("click ", e);
     setCurrent(e.key);
+    if (e.key === "logout") {
+      localStorage.removeItem("user");
+    }
   };
 
   return (

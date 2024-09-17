@@ -67,6 +67,9 @@ const mainTheme: ThemeConfig = {
     Select: {
       colorBorder: "rgb(0,0,0)",
     },
+    Spin: {
+      colorPrimary: "#232323",
+    },
   },
 };
 
