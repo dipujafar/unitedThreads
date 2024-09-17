@@ -1,4 +1,5 @@
-import OrderDetailsContainer from "@/components/(dashboardLayout)/order-details/OrderDetailsContainer";
+import OrderDetailsContainer from "@/components/(dashboardLayout)/orderDetails/OrderDetailsContainer";
+
 
 const OrderDetailsPage = () => {
   return (

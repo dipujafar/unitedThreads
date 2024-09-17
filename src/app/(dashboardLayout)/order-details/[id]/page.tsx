@@ -1,4 +1,4 @@
-import SingleOrderDetailsContainer from '@/components/(dashboardLayout)/order-details/[id]/SingleOrderDetailsContainer';
+import SingleOrderDetailsContainer from '@/components/(dashboardLayout)/orderDetails/[id]/SingleOrderDetailsContainer';
 import React from 'react';
 
 const SingleOrderDetails = () => {
