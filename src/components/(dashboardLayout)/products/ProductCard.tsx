@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FiTrash2 } from "react-icons/fi";
 import { FiEdit } from "react-icons/fi";
 import { TProduct } from "@/types/type";
-import { FloatButton } from "antd";
+
 
 const ProductCard = ({ product }: { product: TProduct }) => {
   return (
@@ -23,8 +23,9 @@ const ProductCard = ({ product }: { product: TProduct }) => {
 
       {/* delete and esit btn */}
       <div className="mt-2 flex gap-1 absolute top-0 right-1">
-      <FloatButton tooltip={<div>Documents</div>} />
-
+        <div className="p-3 bg-red-500 rounded-full">
+          <FiTrash2 color="#fff" size={16} />
+        </div>
         <div className="p-3 bg-green-500 rounded-full">
           <FiEdit color="#fff" size={16} />
         </div>
