@@ -43,7 +43,7 @@ const adminNavLink: MenuItem[] = [
   {
     key: "products",
     icon: <LuClipboardList size={24} />,
-    label: <Link href="/products">Produts</Link>,
+    label: <Link href="/products">Shop Produts</Link>,
   },
   {
     key: "orders",
@@ -122,7 +122,6 @@ const Sidebar = ({ collapsed, setCollapsed }: TSidebarType) => {
     console.log("user not found");
   }, [user, role]);
 
-  console.log(role);
 
   const onClick: MenuProps["onClick"] = (e) => {
     console.log("click ", e);

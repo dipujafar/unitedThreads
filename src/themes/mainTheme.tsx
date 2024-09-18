@@ -66,9 +66,23 @@ const mainTheme: ThemeConfig = {
     },
     Select: {
       colorBorder: "rgb(0,0,0)",
+      colorTextDisabled: "rgb(0,0,0)",
     },
     Spin: {
       colorPrimary: "#232323",
+    },
+    DatePicker: {
+      colorBgElevated: "rgb(35,35,35)",
+      colorBgContainer: "rgb(35,35,35)",
+      colorText: "rgba(255,255,255,0.88)",
+      colorTextDisabled: "rgba(255,253,253,0.7)",
+      colorTextHeading: "rgba(255,255,255,0.88)",
+      colorIconHover: "rgba(247,225,225,0.88)",
+      colorIcon: "rgba(255,255,255,0.8)",
+      colorTextPlaceholder: "rgba(255,255,255,0.8)",
+    },
+    InputNumber: {
+      colorTextDisabled: "rgba(0,0,0,0.8)",
     },
   },
 };

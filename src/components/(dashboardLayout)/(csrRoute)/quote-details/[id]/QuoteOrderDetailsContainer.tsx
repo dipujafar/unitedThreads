@@ -17,6 +17,7 @@ import Link from "next/link";
 
 // Reset FieldType to match the form fields
 type FieldType = {
+  category: string;
   size: string;
   color: string;
   quantity: number;
@@ -35,11 +36,13 @@ const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
 const QuoteOrderDetailsContainer = () => {
   // Setting initial values for all input fields
   const initialValues: FieldType = {
-    size: "L", 
-    color: "#456gdg", 
-    quantity: 10, 
-    materialPreference: "Combinations of materials are looking for 10% cotton , 90% polyester", 
-    price: 50, 
+    category: "Hoddie",
+    size: "L",
+    color: "#455A63",
+    quantity: 10,
+    materialPreference:
+      "Combinations of materials are looking for 10% cotton , 90% polyester",
+    price: 50,
   };
 
   return (
@@ -54,9 +57,9 @@ const QuoteOrderDetailsContainer = () => {
             <p className=" text-md">Feb 16,2022</p>
           </div>
           <Link href={"/message/userName"}>
-          <Button size="large" icon={<TbMessage />}>
-            Message
-          </Button>
+            <Button size="large" icon={<TbMessage />}>
+              Message
+            </Button>
           </Link>
         </div>
         <div className="flex gap-3">
@@ -71,6 +74,7 @@ const QuoteOrderDetailsContainer = () => {
           </div>
         </div>
       </div>
+
       {/* product information */}
 
       <div>
@@ -84,10 +88,12 @@ const QuoteOrderDetailsContainer = () => {
               <div className="flex justify-between">
                 <div className="lg:w-1/3 w-full">
                   <div>
-                    <h4 className="text-2xl ">Category</h4>
-                    <p className="text-3xl font-semibold">Hoodie</p>
+                    <Form.Item label="category" name="category">
+                      <Select size="large" disabled></Select>
+                    </Form.Item>
                   </div>
                   {/* input size */}
+
                   <Form.Item label="Size" name="size">
                     <Select
                       size="large"
@@ -103,13 +109,19 @@ const QuoteOrderDetailsContainer = () => {
                     />
                   </Form.Item>
 
-                  {/* input color */}
-                  <Form.Item label="Color" name="color">
-                    <ColorPicker
-                      size="large"
-                      style={{ width: "100%" }}
-                    ></ColorPicker>
-                  </Form.Item>
+                  <div className="flex gap-x-5">
+                    <div className="border-r-2 pr-5">
+                      {/* input color */}
+                      <Form.Item label="Color" name="color">
+                        <ColorPicker size="large" showText></ColorPicker>
+                      </Form.Item>
+                    </div>
+
+                    <div>
+                      <h1 className="text-lg ">Pantone code</h1>
+                      <p className="mt-2 text-lg">2736c</p>
+                    </div>
+                  </div>
 
                   {/* input quantity */}
                   <Form.Item label="Quantity" name="quantity">
@@ -134,19 +146,31 @@ const QuoteOrderDetailsContainer = () => {
                   <Form.Item label="Product Price" name="price">
                     <InputNumber
                       size="large"
-                      style={{ width: "100%", borderRadius: "15px" }}
+                      style={{ width: "100%", borderRadius: "10px" }}
                       placeholder="Please input product price"
                     />
                   </Form.Item>
-                  <div className="flex flex-col gap-1 justify-center items-center">
-                    <Image
-                      src={uploadedImage}
-                      alt="productImage"
-                      className="border border-black px-4 py-8"
-                    />
-                    <figcaption className="text-[#00B047] text-xl font-medium">
-                      Uploaded Design
-                    </figcaption>
+                  <div className="flex gap-2">
+                    <div className="flex flex-col gap-1 justify-center items-center">
+                      <Image
+                        src={uploadedImage}
+                        alt="productImage"
+                        className="border border-black px-4 py-8"
+                      />
+                      <figcaption className="text-[#00B047] text-xl font-medium">
+                        Front Side
+                      </figcaption>
+                    </div>
+                    <div className="flex flex-col gap-1 justify-center items-center">
+                      <Image
+                        src={uploadedImage}
+                        alt="productImage"
+                        className="border border-black px-4 py-8"
+                      />
+                      <figcaption className="text-[#00B047] text-xl font-medium">
+                        Back Side
+                      </figcaption>
+                    </div>
                   </div>
                 </div>
               </div>
